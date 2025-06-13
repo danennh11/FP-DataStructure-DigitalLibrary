@@ -1,0 +1,14 @@
+D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\bin\Debug\net9.0\DigitalLibrary.exe
+D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\bin\Debug\net9.0\DigitalLibrary.deps.json
+D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\bin\Debug\net9.0\DigitalLibrary.runtimeconfig.json
+D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\bin\Debug\net9.0\DigitalLibrary.dll
+D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\bin\Debug\net9.0\DigitalLibrary.pdb
+D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.AssemblyInfoInputs.cache
+D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.AssemblyInfo.cs
+D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.csproj.CoreCompileInputs.cache
+D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.dll
+D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\obj\Debug\net9.0\refint\DigitalLibrary.dll
+D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.pdb
+D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.genruntimeconfig.cache
+D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\obj\Debug\net9.0\ref\DigitalLibrary.dll
