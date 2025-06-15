@@ -1,5 +1,6 @@
 ﻿using System;
 using DigitalLibrary.Library;
+using DigitalLibrary.LinkedListManual;
 
 namespace DigitalLibrary
 {
@@ -10,26 +11,24 @@ namespace DigitalLibrary
             var library = new DigLib();
 
             string filePath  = "data.txt";
-
-            try
+            if (File.Exists(filePath))
             {
-                if (File.Exists(filePath))
+                string[] list = File.ReadAllLines(filePath);
+                foreach (string titles in list)
                 {
-                    string[] list = File.ReadAllLines(filePath);
-                    foreach (string titles in list)
-                    {
-                        string[] parts = titles.Split(',');
-                        string title = parts[0];
-                        string author = parts[1];
+                    string[] parts = titles.Split(',');
+                    string title = parts[0];
+                    string author = parts[1];
 
-                        library.AddBook(title, author);
-                    }
+                    library.AddBook(title, author);
                 }
-            } catch
-            {
-                Console.WriteLine("Cannot find the file, please provide the correct file path!");
             }
 
+            CommandLine(library);
+        }
+
+        public static void CommandLine(DigLib library)
+        {
             while (true)
             {
                 System.Console.WriteLine("Welcome to the Digital Library!\n" +
@@ -92,12 +91,11 @@ namespace DigitalLibrary
                         return;
 
                     default:
-                        Console.WriteLine("Invalid option.\n" +                
+                        Console.WriteLine("Invalid option.\n" +
                         "Please select an option:");
                         break;
                 }
             }
-
         }
     }
 }
