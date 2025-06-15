@@ -9,6 +9,27 @@ namespace DigitalLibrary
         {
             var library = new DigLib();
 
+            string filePath  = "data.txt";
+
+            try
+            {
+                if (File.Exists(filePath))
+                {
+                    string[] list = File.ReadAllLines(filePath);
+                    foreach (string titles in list)
+                    {
+                        string[] parts = titles.Split(',');
+                        string title = parts[0];
+                        string author = parts[1];
+
+                        library.AddBook(title, author);
+                    }
+                }
+            } catch
+            {
+                Console.WriteLine("Cannot find the file, please provide the correct file path!");
+            }
+
             while (true)
             {
                 System.Console.WriteLine("Welcome to the Digital Library!\n" +
@@ -31,6 +52,8 @@ namespace DigitalLibrary
                         string author = Console.ReadLine() ?? string.Empty;
                         library.AddBook(title, author);
                         Console.WriteLine($"Book '{title}' by {author} added successfully.");
+
+                        Console.WriteLine();
                         break;
 
                     case "S":
@@ -45,6 +68,8 @@ namespace DigitalLibrary
                         {
                             Console.WriteLine($"Book '{searchTitle}' not found.");
                         }
+
+                        Console.WriteLine();
                         break;
 
                     case "R":
@@ -59,6 +84,8 @@ namespace DigitalLibrary
                         {
                             Console.WriteLine($"Book '{removeTitle}' not found or could not be removed.");
                         }
+
+                        Console.WriteLine();
                         break;
 
                     case "E":

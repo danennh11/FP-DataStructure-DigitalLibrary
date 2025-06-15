@@ -54,7 +54,7 @@ namespace DigitalLibrary.LinkedListManual
             Node current = head;
             while (current != null)
             {
-                if (current.val.Title == title)
+                if (current.val.Title.Trim().ToLower() == title.Trim().ToLower())
                 {
                     return current.val;
                 }

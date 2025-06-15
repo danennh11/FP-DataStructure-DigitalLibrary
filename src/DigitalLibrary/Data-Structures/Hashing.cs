@@ -20,7 +20,7 @@ namespace DigitalLibrary.HashTable
 
         private int GetIndex(string title)
         {
-            int hash = Math.Abs(title.GetHashCode());
+            int hash = Math.Abs(title.Trim().ToLower().GetHashCode());
             return hash % size;
         }
 
