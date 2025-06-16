@@ -20,6 +20,7 @@ namespace DigitalLibrary
                 foreach (string titles in list)
                 {
                     string[] parts = titles.Split(',');
+                    if (parts.Length != 2) continue;
                     string title = parts[0];
                     string author = parts[1];
 
