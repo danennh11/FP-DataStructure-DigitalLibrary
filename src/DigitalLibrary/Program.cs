@@ -1,6 +1,8 @@
 ﻿using System;
+using DigitalLibrary.HashTable;
 using DigitalLibrary.Library;
 using DigitalLibrary.LinkedListManual;
+using DigitalLibrary.Books;
 
 namespace DigitalLibrary
 {
@@ -10,9 +12,10 @@ namespace DigitalLibrary
         {
             var library = new DigLib();
 
-            string filePath  = "data.txt";
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data.txt");
             if (File.Exists(filePath))
             {
+                Console.WriteLine("test");
                 string[] list = File.ReadAllLines(filePath);
                 foreach (string titles in list)
                 {
@@ -35,6 +38,7 @@ namespace DigitalLibrary
                     "A. Add Book\n" +
                     "S. Search Book\n" +
                     "R. Remove Book\n" +
+                    "L. Show All Book\n" +
                     "E. Exit\n" +
                     "Please select an option:");
                 var CMD = Console.ReadLine()?.ToUpper();
@@ -86,7 +90,9 @@ namespace DigitalLibrary
 
                         Console.WriteLine();
                         break;
-
+                    case "L":
+                        ShowAllBooks(library);
+                        break;
                     case "E":
                         return;
 
@@ -96,6 +102,57 @@ namespace DigitalLibrary
                         break;
                 }
             }
+        }
+
+        public static void ShowAllBooks(DigLib library)
+        {
+            var table = library.TitleIndex.buckets;
+            int size = library.TitleIndex.size;
+            LinkedList listOfBooks = new LinkedList();
+
+            for (int i = 0; i < size; i++)
+            {
+                LinkedList bucket = table[i];
+
+                Node ptr = bucket.head;
+                while (ptr != null)
+                {
+                    listOfBooks.Push(ptr.val);
+                    ptr = ptr.next;
+                }
+            }
+
+            Node current = listOfBooks.head;
+            int page = 1;
+            int bookPerPage = 100;
+            int count = 0;
+
+            while (current != null)
+            {
+                Console.WriteLine($"{count + 1}. {current.val.Title} by {current.val.Author}");
+                count++;
+
+                if (count % bookPerPage == 0)
+                {
+                    Console.WriteLine($"\n -- Page {page} --\n -- Press Enter to Continue --\n -- Press E to Exit --");
+                    string cmd = Console.ReadLine();
+                    
+                    if (cmd == null)
+                    {
+                        page++;
+                    }
+                    else if (cmd.ToLower() == "e")
+                    {
+                        break;
+                    }
+
+                    page++;
+                }
+
+                current = current.next;
+            }
+
+            Console.WriteLine();
         }
     }
 }

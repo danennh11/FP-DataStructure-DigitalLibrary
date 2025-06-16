@@ -6,8 +6,8 @@ namespace DigitalLibrary.HashTable
 {
     public class BookHashTable
     {
-        private int size = 100;
-        private LinkedList[] buckets;
+        public int size = 100;
+        public LinkedList[] buckets;
 
         public BookHashTable()
         {

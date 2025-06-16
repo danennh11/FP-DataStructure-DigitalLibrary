@@ -17,7 +17,7 @@ namespace DigitalLibrary.LinkedListManual
 
     public class LinkedList
     {
-        private Node head;
+        public Node head;
         public LinkedList()
         {
             this.head = null!;
