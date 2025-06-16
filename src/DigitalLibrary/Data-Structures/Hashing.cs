@@ -6,8 +6,8 @@ namespace DigitalLibrary.HashTable
 {
     public class BookHashTable
     {
-        private int size = 100;
-        private LinkedList[] buckets;
+        public int size = 100;
+        public LinkedList[] buckets;
 
         public BookHashTable()
         {
@@ -20,7 +20,7 @@ namespace DigitalLibrary.HashTable
 
         private int GetIndex(string title)
         {
-            int hash = Math.Abs(title.GetHashCode());
+            int hash = Math.Abs(title.Trim().ToLower().GetHashCode());
             return hash % size;
         }
 

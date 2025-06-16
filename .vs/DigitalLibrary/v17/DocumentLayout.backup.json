@@ -1,0 +1,93 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\Kuliah\\project\\FP-DataStructure-DigitalLibrary\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FC8A3A-70FF-45B4-8FA8-6C571A4948F2}|src\\DigitalLibrary\\DigitalLibrary.csproj|c:\\users\\asus\\desktop\\kuliah\\project\\fp-datastructure-digitallibrary\\src\\digitallibrary\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FC8A3A-70FF-45B4-8FA8-6C571A4948F2}|src\\DigitalLibrary\\DigitalLibrary.csproj|solutionrelative:src\\digitallibrary\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FC8A3A-70FF-45B4-8FA8-6C571A4948F2}|src\\DigitalLibrary\\DigitalLibrary.csproj|c:\\users\\asus\\desktop\\kuliah\\project\\fp-datastructure-digitallibrary\\src\\digitallibrary\\data-structures\\linkedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FC8A3A-70FF-45B4-8FA8-6C571A4948F2}|src\\DigitalLibrary\\DigitalLibrary.csproj|solutionrelative:src\\digitallibrary\\data-structures\\linkedlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FC8A3A-70FF-45B4-8FA8-6C571A4948F2}|src\\DigitalLibrary\\DigitalLibrary.csproj|c:\\users\\asus\\desktop\\kuliah\\project\\fp-datastructure-digitallibrary\\src\\digitallibrary\\data-structures\\hashing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FC8A3A-70FF-45B4-8FA8-6C571A4948F2}|src\\DigitalLibrary\\DigitalLibrary.csproj|solutionrelative:src\\digitallibrary\\data-structures\\hashing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FC8A3A-70FF-45B4-8FA8-6C571A4948F2}|src\\DigitalLibrary\\DigitalLibrary.csproj|c:\\users\\asus\\desktop\\kuliah\\project\\fp-datastructure-digitallibrary\\src\\digitallibrary\\library\\library.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FC8A3A-70FF-45B4-8FA8-6C571A4948F2}|src\\DigitalLibrary\\DigitalLibrary.csproj|solutionrelative:src\\digitallibrary\\library\\library.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Kuliah\\project\\FP-DataStructure-DigitalLibrary\\src\\DigitalLibrary\\Program.cs",
+              "RelativeDocumentMoniker": "src\\DigitalLibrary\\Program.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Kuliah\\project\\FP-DataStructure-DigitalLibrary\\src\\DigitalLibrary\\Program.cs",
+              "RelativeToolTip": "src\\DigitalLibrary\\Program.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBoAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T06:48:43.391Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Hashing.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Kuliah\\project\\FP-DataStructure-DigitalLibrary\\src\\DigitalLibrary\\Data-Structures\\Hashing.cs",
+              "RelativeDocumentMoniker": "src\\DigitalLibrary\\Data-Structures\\Hashing.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Kuliah\\project\\FP-DataStructure-DigitalLibrary\\src\\DigitalLibrary\\Data-Structures\\Hashing.cs",
+              "RelativeToolTip": "src\\DigitalLibrary\\Data-Structures\\Hashing.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T07:13:50.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Library.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Kuliah\\project\\FP-DataStructure-DigitalLibrary\\src\\DigitalLibrary\\Library\\Library.cs",
+              "RelativeDocumentMoniker": "src\\DigitalLibrary\\Library\\Library.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Kuliah\\project\\FP-DataStructure-DigitalLibrary\\src\\DigitalLibrary\\Library\\Library.cs",
+              "RelativeToolTip": "src\\DigitalLibrary\\Library\\Library.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T07:07:28.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LinkedList.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Kuliah\\project\\FP-DataStructure-DigitalLibrary\\src\\DigitalLibrary\\Data-Structures\\LinkedList.cs",
+              "RelativeDocumentMoniker": "src\\DigitalLibrary\\Data-Structures\\LinkedList.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Kuliah\\project\\FP-DataStructure-DigitalLibrary\\src\\DigitalLibrary\\Data-Structures\\LinkedList.cs",
+              "RelativeToolTip": "src\\DigitalLibrary\\Data-Structures\\LinkedList.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAwwDgAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T07:04:37.717Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

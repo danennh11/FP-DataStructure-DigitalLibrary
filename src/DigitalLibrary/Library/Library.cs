@@ -7,8 +7,8 @@ namespace DigitalLibrary.Library
 {
     public class DigLib
     {
-        private BookHashTable TitleIndex;
-        private LinkedList ListOfBooks;
+        public BookHashTable TitleIndex;
+        public LinkedList ListOfBooks;
         public DigLib()
         {
             TitleIndex = new BookHashTable();

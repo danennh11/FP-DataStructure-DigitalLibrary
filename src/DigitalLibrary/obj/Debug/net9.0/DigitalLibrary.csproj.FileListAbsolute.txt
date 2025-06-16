@@ -12,3 +12,18 @@ D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\obj\Debug\net9.0\
 D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.pdb
 D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.genruntimeconfig.cache
 D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\obj\Debug\net9.0\ref\DigitalLibrary.dll
+C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\bin\Debug\net9.0\DigitalLibrary.exe
+C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\bin\Debug\net9.0\DigitalLibrary.deps.json
+C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\bin\Debug\net9.0\DigitalLibrary.runtimeconfig.json
+C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\bin\Debug\net9.0\DigitalLibrary.dll
+C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\bin\Debug\net9.0\DigitalLibrary.pdb
+C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.sourcelink.json
+C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.dll
+C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\obj\Debug\net9.0\refint\DigitalLibrary.dll
+C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.pdb
+C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.genruntimeconfig.cache
+C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\obj\Debug\net9.0\ref\DigitalLibrary.dll
