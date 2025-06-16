@@ -126,31 +126,35 @@ namespace DigitalLibrary
             Node current = listOfBooks.head;
             int page = 1;
             int bookPerPage = 100;
-            int count = 0;
 
             while (current != null)
             {
-                Console.WriteLine($"{count + 1}. {current.val.Title} by {current.val.Author}");
-                count++;
 
-                if (count % bookPerPage == 0)
+                Node start = current;
+                for (int i = 0; i < bookPerPage && current != null; i++)
                 {
-                    Console.WriteLine($"\n -- Page {page} --\n -- Press Enter to Continue --\n -- Press E to Exit --");
-                    string cmd = Console.ReadLine();
-                    
-                    if (cmd == null)
-                    {
-                        page++;
-                    }
-                    else if (cmd.ToLower() == "e")
-                    {
-                        break;
-                    }
-
-                    page++;
+                    System.Console.WriteLine($"{i + 1}. {current.val.Title} by {current.val.Author}");
+                    current = current.next;
+                }
+                System.Console.WriteLine("\n< Prev | > Next | E Exit");
+                string? input = Console.ReadLine()?.ToLower();
+                if (input == "e")
+                {
+                    break;
+                }
+                else if (input == ">" || input == ",")
+                {
+                    for (int i = 0; i < bookPerPage && start != null; i++)
+                        start = start.next;
+                    if (start != null) page++;
+                }
+                else if (input == "<" || input == ".")
+                {
+                    for (int i = 0; i < bookPerPage && start?.prev != null; i++)
+                        start = start.prev;
+                    if (start != null) page = Math.Max(1, page - 1);
                 }
 
-                current = current.next;
             }
 
             Console.WriteLine();

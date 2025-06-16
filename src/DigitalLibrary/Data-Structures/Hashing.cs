@@ -20,8 +20,16 @@ namespace DigitalLibrary.HashTable
 
         private int GetIndex(string title)
         {
-            int hash = Math.Abs(title.Trim().ToLower().GetHashCode());
-            return hash % size;
+            string trimmedTitle = title.Trim().ToLower();
+            string FirstTwoChars = trimmedTitle.Length >= 2 ? trimmedTitle.Substring(0, 2) : trimmedTitle;
+
+            int hash = 0;
+            foreach (char c in FirstTwoChars)
+            {
+                hash = (hash * 31 + c);
+            }
+
+            return Math.Abs(hash) % size;
         }
 
         public void Insert(string title, Book book)

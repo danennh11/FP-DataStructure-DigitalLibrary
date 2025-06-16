@@ -27,3 +27,4 @@ C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\Digital
 C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.pdb
 C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.genruntimeconfig.cache
 C:\Users\ASUS\Desktop\Kuliah\project\FP-DataStructure-DigitalLibrary\src\DigitalLibrary\obj\Debug\net9.0\ref\DigitalLibrary.dll
+D:\C SHARP\Sem-Dua\StrukDat\FP-Perpustakaan\src\DigitalLibrary\obj\Debug\net9.0\DigitalLibrary.sourcelink.json

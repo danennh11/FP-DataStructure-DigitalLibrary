@@ -7,46 +7,72 @@ namespace DigitalLibrary.LinkedListManual
     {
         public Book val { get; set; }
         public Node next { get; set; }
+        public Node prev { get; set; }
 
         public Node(Book val)
         {
             this.val = val;
             this.next = null!;
+            this.prev = null!;
         }
     }
 
     public class LinkedList
     {
         public Node head;
+        public Node tail;
+
         public LinkedList()
         {
-            this.head = null!;
+            head = null!;
+            tail = null!;
         }
         public void Push(Book book)
         {
             Node newNode = new Node(book);
             newNode.next = head;
+            newNode.prev = null!;
+
+            if (head != null)
+            {
+                head.prev = newNode;
+            }
             head = newNode;
+            if (tail == null)
+            {
+                tail = newNode;
+            }
         }
         public bool Remove(string title)
         {
-            if (head == null) return false;
-            if (head.val.Title == title)
-            {
-                head = head.next;
-                return true;
-            }
             Node curr = head;
-            while (curr.next != null)
+            while (curr != null)
             {
-                if (curr.next.val.Title == title)
+                if (curr.val.Title.Trim().ToLower() == title.Trim().ToLower())
                 {
-                    curr.next = curr.next.next;
-                    return true;
+                    if (curr.prev != null)
+                    {
+                        curr.prev.next = curr.next;
+                    }
+                    else
+                    {
+                        head = curr.next;
+                    }
+
+                    if (curr.next != null)
+                    {
+                        curr.next.prev = curr.prev!;
+                    }
+                    else
+                    {
+                        tail = curr.prev!;
+                    }
+
+                    return true; 
                 }
                 curr = curr.next;
             }
-            return false;
+                return false;
         }
 
         public Book? Find(string title)
