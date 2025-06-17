@@ -12,8 +12,6 @@ namespace DigitalLibrary.LinkedListManual
         public Node(Book val)
         {
             this.val = val;
-            this.next = null!;
-            this.prev = null!;
         }
     }
 
@@ -22,24 +20,19 @@ namespace DigitalLibrary.LinkedListManual
         public Node head;
         public Node tail;
 
-        public LinkedList()
-        {
-            head = null!;
-            tail = null!;
-        }
         public void Push(Book book)
         {
             Node newNode = new Node(book);
-            newNode.next = head;
-            newNode.prev = null!;
 
-            if (head != null)
+            if (head == null)
             {
-                head.prev = newNode;
+                head = newNode;
+                tail = newNode;
             }
-            head = newNode;
-            if (tail == null)
+            else
             {
+                tail.next = newNode;
+                newNode.prev = tail;
                 tail = newNode;
             }
         }
@@ -61,11 +54,11 @@ namespace DigitalLibrary.LinkedListManual
 
                     if (curr.next != null)
                     {
-                        curr.next.prev = curr.prev!;
+                        curr.next.prev = curr.prev;
                     }
                     else
                     {
-                        tail = curr.prev!;
+                        tail = curr.prev;
                     }
 
                     return true; 
@@ -77,10 +70,11 @@ namespace DigitalLibrary.LinkedListManual
 
         public Book? Find(string title)
         {
+            string searchTitle = title.Trim().ToLower();
             Node current = head;
             while (current != null)
             {
-                if (current.val.Title.Trim().ToLower() == title.Trim().ToLower())
+                if (current.val.Title.Trim().ToLower() == searchTitle)
                 {
                     return current.val;
                 }

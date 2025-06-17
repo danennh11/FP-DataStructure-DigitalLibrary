@@ -8,24 +8,39 @@ namespace DigitalLibrary
 {
     public class Program
     {
+        static int dataCount = 0;
+
         public static void Main(string[] args)
         {
             var library = new DigLib();
 
-            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data.txt");
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "data.csv");
+
             if (File.Exists(filePath))
             {
-                Console.WriteLine("test");
                 string[] list = File.ReadAllLines(filePath);
-                foreach (string titles in list)
-                {
-                    string[] parts = titles.Split(',');
-                    if (parts.Length != 2) continue;
-                    string title = parts[0];
-                    string author = parts[1];
+                string[] header = list[0].Split(',');
 
-                    library.AddBook(title, author);
+                int indexTitle = Array.IndexOf(header, "bookTitle");
+                int indexAuthor = Array.IndexOf(header, "authorName");
+
+                for (int i = 1; i < list.Length; i++)
+                {
+                    string[] data = list[i].Split(',');
+
+                    string book = data[indexTitle].Replace("\"", "");
+                    string author = data[indexAuthor];
+
+                    if (!string.IsNullOrWhiteSpace(book) && !string.IsNullOrWhiteSpace(author))
+                    {
+                        library.AddBook(book, author);
+                        dataCount++;
+                    }
                 }
+
+                Console.WriteLine($"✅ Loaded {dataCount} books successfully!");
+                Console.WriteLine("Press any key to continue...");
+                Console.ReadKey();
             }
 
             CommandLine(library);
@@ -35,6 +50,7 @@ namespace DigitalLibrary
         {
             while (true)
             {
+                Console.Clear();
                 System.Console.WriteLine("Welcome to the Digital Library!\n" +
                     "A. Add Book\n" +
                     "S. Search Book\n" +
@@ -55,8 +71,10 @@ namespace DigitalLibrary
                         Console.Write("Enter book author: ");
                         string author = Console.ReadLine() ?? string.Empty;
                         library.AddBook(title, author);
+                        dataCount++;
                         Console.WriteLine($"Book '{title}' by {author} added successfully.");
 
+                        Console.ReadLine();
                         Console.WriteLine();
                         break;
 
@@ -73,6 +91,7 @@ namespace DigitalLibrary
                             Console.WriteLine($"Book '{searchTitle}' not found.");
                         }
 
+                        Console.ReadLine();
                         Console.WriteLine();
                         break;
 
@@ -83,6 +102,7 @@ namespace DigitalLibrary
                         if (removed)
                         {
                             Console.WriteLine($"Book '{removeTitle}' removed successfully.");
+                            dataCount--;
                         }
                         else
                         {
@@ -92,11 +112,13 @@ namespace DigitalLibrary
                         Console.WriteLine();
                         break;
                     case "L":
+                        Console.Clear();
                         ShowAllBooks(library);
                         break;
                     case "E":
+                        Console.WriteLine("\n👋 Thank you for using Digital Library!");
+                        Console.ReadLine();
                         return;
-
                     default:
                         Console.WriteLine("Invalid option.\n" +
                         "Please select an option:");
@@ -114,7 +136,6 @@ namespace DigitalLibrary
             for (int i = 0; i < size; i++)
             {
                 LinkedList bucket = table[i];
-
                 Node ptr = bucket.head;
                 while (ptr != null)
                 {
@@ -123,38 +144,45 @@ namespace DigitalLibrary
                 }
             }
 
-            Node current = listOfBooks.head;
+            Node currentPage = listOfBooks.head;
             int page = 1;
             int bookPerPage = 100;
 
-            while (current != null)
+            while (currentPage != null)
             {
+                Console.Clear();
+                Node temp = currentPage;
 
-                Node start = current;
-                for (int i = 0; i < bookPerPage && current != null; i++)
+                for (int i = 0; i < bookPerPage && temp != null; i++)
                 {
-                    System.Console.WriteLine($"{i + 1}. {current.val.Title} by {current.val.Author}");
-                    current = current.next;
-                }
-                System.Console.WriteLine("\n< Prev | > Next | E Exit");
-                string? input = Console.ReadLine()?.ToLower();
-                if (input == "e")
-                {
-                    break;
-                }
-                else if (input == ">" || input == ",")
-                {
-                    for (int i = 0; i < bookPerPage && start != null; i++)
-                        start = start.next;
-                    if (start != null) page++;
-                }
-                else if (input == "<" || input == ".")
-                {
-                    for (int i = 0; i < bookPerPage && start?.prev != null; i++)
-                        start = start.prev;
-                    if (start != null) page = Math.Max(1, page - 1);
+                    Console.WriteLine($"{(page - 1) * bookPerPage + i + 1}. {temp.val.Title} by {temp.val.Author}");
+                    temp = temp.next;
                 }
 
+                Console.WriteLine(new string('=', 50));
+                Console.WriteLine($" Page {page} of {Math.Max(1, (int)Math.Ceiling((double)dataCount / bookPerPage))} ");
+                Console.WriteLine(new string('=', 50));
+
+                Console.WriteLine(" < Prev | Next > | E Exit");
+                string input = Console.ReadLine()?.ToLower();
+
+                if (input == "e") break;
+                else if (input == "<" || input == ",")
+                {
+                    for (int i = 0; i < bookPerPage && currentPage.prev != null; i++)
+                    {
+                        currentPage = currentPage.prev;
+                    }
+                    page = Math.Max(1, page - 1);
+                }
+                else if (input == ">" || input == ".")
+                {
+                    for (int i = 0; i < bookPerPage && currentPage.next != null; i++)
+                    {
+                        currentPage = currentPage.next;
+                    }
+                    page++;
+                }
             }
 
             Console.WriteLine();

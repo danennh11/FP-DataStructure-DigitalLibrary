@@ -6,7 +6,7 @@ namespace DigitalLibrary.HashTable
 {
     public class BookHashTable
     {
-        public int size = 100;
+        public int size = 677;
         public LinkedList[] buckets;
 
         public BookHashTable()
@@ -20,22 +20,24 @@ namespace DigitalLibrary.HashTable
 
         private int GetIndex(string title)
         {
-            string trimmedTitle = title.Trim().ToLower();
-            string FirstTwoChars = trimmedTitle.Length >= 2 ? trimmedTitle.Substring(0, 2) : trimmedTitle;
+            string trimmedTitle = title.Trim().ToLower().Replace(" ", "");
+            char c1 = trimmedTitle.Length >= 1 && char.IsLetter(trimmedTitle[0]) ? trimmedTitle[0] : 'a';
+            char c2 = trimmedTitle.Length >= 2 && char.IsLetter(trimmedTitle[1]) ? trimmedTitle[1] : 'a';
 
-            int hash = 0;
-            foreach (char c in FirstTwoChars)
-            {
-                hash = (hash * 31 + c);
-            }
+            int hash = ((c1 - 'a') * 26) + (c2 - 'a');
 
-            return Math.Abs(hash) % size;
+            return Math.Clamp(hash, 0, size - 1);
         }
 
         public void Insert(string title, Book book)
         {
             int index = GetIndex(title);
-            buckets[index].Push(book);
+            Book exist = buckets[index].Find(title);
+            
+            if(exist == null)
+            {
+                buckets[index].Push(book);
+            }
         }
 
         public Book? Get(string title)
